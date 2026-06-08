@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {font-family: Willow; src: url(https://dl.dropbox.com/s/a3bdnlbgauyqz43mmytgs/FLORA.TTF?rlkey=5xxkpxr8b2djd9sl1yll3ele7&dl=0);}
+
+.willowtab i {color: #b08e6b;} 
+.willowtab u {text-decoration: none !Important; font-style: italic; color: #cbb14a; }
+.willowtab blockquote strong {color: #b08e6b;} 
+.willowtab blockquote {border-color: #b08e6b !important;} 
+.willowtab blockquote img {height: 15px !important;}
+.willowtab blockquote::before {color: #b08e6b !important;content:"\2766" !important;}
+
+progress[value].v-mpbar::-moz-progress-bar
+{background-color: steelblue !important; 
+-webkit-appearance: none; 
+appearance: none;} 
+
+progress.v-mpbar::-webkit-progress-value 
+{background-color: steelblue !important; 
+-webkit-appearance: none; 
+appearance: none;} 
+
+progress[value].v-vbar::-moz-progress-bar
+{background: crimson; 
+-webkit-appearance: none; 
+appearance: none;} 
+
+progress.v-vbar[value]::-webkit-progress-value 
+{background: crimson; 
+-webkit-appearance: none; 
+appearance: none;} 
+
+progress, progress.v-vbar::-webkit-progress-bar {
+border: none; 
+border-radius: 2px; 
+background: #eee; text-align: 
+left; -webkit-appearance: none; 
+appearance: none; width: 80%;}
+
+.prowil {width: 50px; text-align: right; display: inline-block; margin-right: 5px;}
+
+.willowbar {width: 510px; text-align: left; margin: auto;}
+
+.willowtab {overflow: hidden; width: 100%; font-family: 'Montserrat',sans-serif; -; white-space: pre-line;} 
+
+.willowtab .cosito {width: 25px; height: 25px; background: #71567a; position: relative; border-radius: 50%; cursor: pointer;} 
+.willowtab .cosi1 {font-family: playfair display; min-width: 150px; max-width: 250px; max-height: 475px; position: absolute; bottom: 50px; right: 0px; transform: translatey(200px); opacity: 0; transition: ease 0.7s; text-align: center; border-radius: 5px; margin: auto; background: rgba(41, 31, 54, 0.30); padding: 5px; backdrop-filter: blur(5px); z-index: -1;} 
+.willowtab .cosito:focus .cosi1 {transform: translatey(0); opacity: 1; z-index: 1;} 
+.cosi1 a img {max-width: 250px !important;}
+
+#willow_2834, 
+#willow_182, #willow_1182,  
+.willowbox_948:hover,  
+#willowStats_736::before, 
+#modified_msg54255, 
+#modified_54255, #modified_274180 {opacity: 0; font-size: 0.1px;}
+
+@media only screen and (max-width: 1048px) {
+.cosi1 a img {max-width: 150px !important;}
+}
+
+.willowtab .cosito.w1 {background: #b08e6b url(https://i.imgur.com/rd6mYVH.png) center/80% no-repeat;} 
+.willowtab .cosito.w2{background: #b08e6b url(https://i.imgur.com/PLNeB8H.png) center/80% no-repeat;} 
+.willowtab .cosito.w3{background: #b08e6b url(https://i.imgur.com/ZIPdMjv.png) center/80% no-repeat;}
+
+.willowtab-head {width: 100%; height: 250px; display: flex; justify-content: center; align-items: center; border-radius: 10px; overflow: hidden; background-size: cover; background-position: center;}
+
+.willowtab-av {margin: auto; width: 150px; height: 150px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; z-index: 3; border: 3px solid #eee; background-size: cover; background-position: center;}
+
+.will-yt {width: 150px; height: 150px; border-radius: 50%; position: relative; margin: auto;}
+.w-b-w {filter: grayscale(1) brightness(.8) contrast(1.15);}
+
+.will-yt:before {
+  content: ' ';
+  display: block;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-animation: v-ava 5s infinite;
+  -moz-animation: v-ava 5s infinite;
+  -o-animation: v-ava 5s infinite;
+  animation: v-ava 5s infinite;
+  position: absolute;
+  backdrop-filter: blur(5px); z-index: 1;}
+
+@keyframes v-ava {0% {transform: scale(1); opacity: 1;} 100% {transform: scale(2.2); opacity: 0;}} 
+
+.dw-main {cursor: pointer; width: 380px; height: 261px; background: url(https://i.imgur.com/xXROrxu.png) center/cover; position: relative; overflow: hidden;}  
+.dw-main-back {width: 380px; height: 261px; background: url(https://i.imgur.com/Br6gYUL.png) center/cover; position: relative; overflow: hidden;}
+.dw-sub-back {width: 380px; height: 261px; position: relative;}
+    
+  
+.dw-card {cursor: pointer; background-color: transparent; width: 380px; height: 261px; margin: auto;}  
+.dw-inner {position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; transition-delay: 0.8s;} 
+.dw-card:hover .dw-inner {transform: rotateY(180deg); transition-delay: 0s;}
+.dw-front, .dw-back {position: absolute; -webkit-backface-visibility: hidden; backface-visibility: hidden;}  
+.dw-back {color: white; transform: rotateY(180deg);}
+
+.wheadmin {display: flex; justify-content: center; align-items: center;}
+.wheadminbar {width:15%; height: 1px; background: #b08e6b ;}
+.wheadmintitu {font-family: 'Willow', sans-serif; font-size: 25px; width: 60%; text-align: center;}
