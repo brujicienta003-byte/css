@@ -1,0 +1,132 @@
+  .noche-estrellada {
+    --fondo: #0f121d;
+    --fondo-secundario: #14192b;
+    --fondo-fila: #171d33;
+    --fondo-hover: #1d2647;
+    --borde: #353b4d;
+    --dorado: #c58a55;
+    --dorado-claro: #e4b27b;
+    --texto: #d5d6df;
+    --texto-suave: #9297aa;
+
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    box-shadow:
+      0 12px 35px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .noche-estrellada__cabecera {
+    padding: 28px 25px 24px;
+    text-align: center;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(197, 138, 85, 0.08),
+        transparent 45%
+      ),
+      var(--fondo-secundario);
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .noche-estrellada__titulo {
+    margin: 0;
+    color: var(--dorado-claro);
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 14px rgba(197, 138, 85, 0.2);
+  }
+
+  .noche-estrellada__subtitulo {
+    margin-top: 8px;
+    color: var(--texto-suave);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .noche-estrellada__contenedor {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .noche-estrellada table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+  }
+
+  .noche-estrellada th {
+    padding: 14px 12px;
+    background: #111625;
+    border: 1px solid var(--borde);
+    color: var(--dorado-claro);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .noche-estrellada td {
+    padding: 12px;
+    border: 1px solid var(--borde);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .noche-estrellada tbody tr:nth-child(odd) {
+    background: var(--fondo);
+  }
+
+  .noche-estrellada tbody tr:nth-child(even) {
+    background: var(--fondo-fila);
+  }
+
+  .noche-estrellada tbody tr:hover td {
+    background: var(--fondo-hover);
+    color: #ffffff;
+  }
+
+  .noche-estrellada td:first-child {
+    color: var(--dorado-claro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .noche-estrellada td:nth-last-child(-n+2) {
+    font-weight: bold;
+  }
+
+  .noche-estrellada td:nth-last-child(2) {
+    color: var(--dorado-claro);
+  }
+
+  .noche-estrellada__pie {
+    padding: 12px 20px;
+    background: var(--fondo-secundario);
+    border-top: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
