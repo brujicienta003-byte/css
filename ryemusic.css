@@ -1,0 +1,173 @@
+.ytmusic-drop{
+position:relative;
+width:270px;
+}
+
+.ytmusic-drop>summary{
+display:flex;
+align-items:center;
+justify-content:center;
+width:52px;
+height:52px;
+margin:auto;
+border-radius:50%;
+background:#666259;
+box-shadow:0 4px 14px #b1a17d7a;
+cursor:pointer;
+list-style:none;
+transition:.25s;
+}
+
+.ytmusic-drop>summary::-webkit-details-marker{
+display:none;
+}
+
+.ytmusic-drop>summary:after{
+content:"";
+display:block;
+margin-left:4px;
+border-top:8px solid transparent;
+border-bottom:8px solid transparent;
+border-left:13px solid #fff;
+}
+
+.ytmusic-drop>summary:hover{
+transform:scale(1.08);
+background:#147dcc;
+}
+
+.ytmusic-drop[open]>summary{
+position:absolute;
+top:18px;
+right:18px;
+z-index:5;
+width:24px;
+height:24px;
+margin:0;
+background:#0009;
+box-shadow:none;
+}
+
+.ytmusic-drop[open]>summary:after{
+content:"×";
+margin:0;
+border:0;
+color:#fff;
+font:18px/1 Arial;
+}
+
+.ytmusic-drop[open]>summary:hover{
+transform:none;
+background:#000;
+}
+
+.ytmusic{
+width:270px;
+padding:12px 10px 14px;
+box-sizing:border-box;
+background:#fff;
+color:#171717;
+font-family:Arial,sans-serif;
+text-align:center;
+border-radius:4px;
+box-shadow:0 5px 20px #0002;
+}
+
+.ytmusic-video{
+position:relative;
+width:250px;
+height:250px;
+overflow:hidden;
+background:#111;
+}
+
+.ytmusic-video iframe{
+position:absolute;
+top:50%;
+left:50%;
+width:445px;
+height:250px;
+border:0;
+transform:translate(-50%,-50%);
+}
+
+.ytmusic-info{
+padding:8px 0 10px;
+}
+
+.ytmusic-info b{
+display:block;
+font-size:14px;
+line-height:17px;
+}
+
+.ytmusic-info span{
+display:block;
+margin-top:2px;
+color:#555;
+font-size:9px;
+}
+
+.ytmusic-controls{
+display:flex;
+align-items:center;
+justify-content:space-around;
+padding:0 13px 10px;
+}
+
+.ytmusic-controls i{
+width:22px;
+color:#222;
+font-size:13px;
+font-style:normal;
+user-select:none;
+}
+
+.ytmusic-controls i:first-child,
+.ytmusic-controls i:last-child{
+color:#888;
+}
+
+.ytmusic-controls strong{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:4px;
+width:43px;
+height:43px;
+border-radius:50%;
+background:#278fe1;
+box-shadow:0 3px 9px #278fe155;
+}
+
+.ytmusic-controls strong em{
+display:block;
+width:4px;
+height:15px;
+border-radius:2px;
+background:#fff;
+}
+
+.ytmusic-bar{
+position:relative;
+width:100%;
+height:3px;
+margin-bottom:7px;
+overflow:hidden;
+border-radius:5px;
+background:#ddd;
+}
+
+.ytmusic-bar span{
+display:block;
+width:57%;
+height:100%;
+background:#278fe1;
+}
+
+.ytmusic-time{
+display:flex;
+justify-content:space-between;
+color:#333;
+font:9px monospace;
+}
