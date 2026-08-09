@@ -256,3 +256,81 @@ max-width: 100%;
 from { opacity: 0; transform: translateY(-5px); }
 to { opacity: 1; transform: translateY(0); }
 }
+
+.rye-tag::after {
+content: "FASHION EDITOR";
+animation: ryeTags 20s infinite;
+}
+
+@keyframes ryeTags {
+
+0%, 16% {
+content: "FASHION EDITOR";
+opacity: 1;
+}
+
+19% {
+content: "FASHION EDITOR";
+opacity: 0;
+}
+
+20% {
+content: "TREND SMASHER";
+opacity: 0;
+}
+
+22%, 36% {
+content: "TREND SMASHER";
+opacity: 1;
+}
+
+39% {
+content: "TREND SMASHER";
+opacity: 0;
+}
+
+40% {
+content: "CERTIFIED IT GIRL";
+opacity: 0;
+}
+
+42%, 56% {
+content: "CERTIFIED IT GIRL";
+opacity: 1;
+}
+
+59% {
+content: "CERTIFIED IT GIRL";
+opacity: 0;
+}
+
+60% {
+content: "FASHION MENACE";
+opacity: 0;
+}
+
+62%, 76% {
+content: "FASHION MENACE";
+opacity: 1;
+}
+
+79% {
+content: "FASHION MENACE";
+opacity: 0;
+}
+
+80% {
+content: "TREND DICTATOR";
+opacity: 0;
+}
+
+82%, 96% {
+content: "TREND DICTATOR";
+opacity: 1;
+}
+
+100% {
+content: "FASHION EDITOR";
+opacity: 0;
+}
+}
