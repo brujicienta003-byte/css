@@ -4,61 +4,61 @@ width:270px;
 }
 
 .ytmusic-drop>summary{
-display:flex;
-align-items:center;
-justify-content:center;
-width:52px;
-height:52px;
-margin:auto;
-border-radius:50%;
-background:#666259;
-box-shadow:0 4px 14px #b1a17d7a;
-cursor:pointer;
-list-style:none;
-transition:.25s;
+display:flex !important;
+align-items:center !important;
+justify-content:center !important;
+width:52px !important;
+height:52px !important;
+margin:auto !important;
+border-radius:50% !important;
+background:#666259 !important;
+box-shadow:0 4px 14px #b1a17d7a !important;
+cursor:pointer !important;
+list-style:none !important;
+transition:.25s !important;
 }
 
 .ytmusic-drop>summary::-webkit-details-marker{
-display:none;
+display:none !important;
 }
 
 .ytmusic-drop>summary:after{
-content:"";
-display:block;
-margin-left:4px;
-border-top:8px solid transparent;
-border-bottom:8px solid transparent;
-border-left:13px solid #fff;
+content:"" !important;
+display:block !important;
+margin-left:4px !important;
+border-top:8px solid transparent !important;
+border-bottom:8px solid transparent !important;
+border-left:13px solid #fff !important;
 }
 
 .ytmusic-drop>summary:hover{
-transform:scale(1.08);
-background:#147dcc;
+transform:scale(1.08) !important;
+background:#147dcc !important;
 }
 
 .ytmusic-drop[open]>summary{
-position:absolute;
-top:18px;
-right:18px;
-z-index:5;
-width:24px;
-height:24px;
-margin:0;
-background:#0009;
-box-shadow:none;
+position:absolute !important;
+top:18px !important;
+right:18px !important;
+z-index:5 !important;
+width:24px !important;
+height:24px !important;
+margin:0 !important;
+background:#0009 !important;
+box-shadow:none !important;
 }
 
 .ytmusic-drop[open]>summary:after{
-content:"×";
-margin:0;
-border:0;
-color:#fff;
-font:18px/1 Arial;
+content:"×" !important;
+margin:0 !important;
+border:0 !important;
+color:#fff !important;
+font:18px/1 Arial !important;
 }
 
 .ytmusic-drop[open]>summary:hover{
-transform:none;
-background:#000;
+transform:none !important;
+background:#000 !important;
 }
 
 .ytmusic{
