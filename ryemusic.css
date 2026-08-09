@@ -83,13 +83,13 @@ filter: grayscale(100%) contrast(210%) brightness(30%);
 }
 
 .ytmusic-video iframe{
-position:absolute;
-top:50%;
-left:50%;
-width:640px;
-height:360px;
-border:0;
-transform:translate(-50%,-50%);
+position:absolute !important;
+top:50% !important;
+left:50% !important;
+width:640px !important;
+height:360px !important;
+border:0 !important;
+transform:translate(-50%,-50%) !important;
 }
 
 .ytmusic-info{
