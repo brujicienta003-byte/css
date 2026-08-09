@@ -148,6 +148,7 @@ word-break: break-word;
 }
 .itgirl-body p {
 margin-bottom: 18px;
+white-space: pre-line;
 }
 .itgirl-body p:first-of-type::first-letter {
 font-family: 'Cormorant Garamond', serif;
@@ -157,6 +158,11 @@ line-height: 0.8;
 margin-right: 10px;
 font-weight: 600;
 color: #1a1a1a;
+}
+ry {
+color: #666259;
+font-weight: 600;
+font-style: italic;
 }
 /* BOTÓN ATUENDO */
 .itgirl-outfit-section {
