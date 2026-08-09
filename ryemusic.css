@@ -79,6 +79,7 @@ width:250px;
 height:250px;
 overflow:hidden;
 background:#111;
+filter: grayscale(100%) contrast(210%) brightness(30%);
 }
 
 .ytmusic-video iframe{
