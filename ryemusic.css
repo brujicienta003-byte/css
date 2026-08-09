@@ -136,8 +136,8 @@ gap:4px;
 width:43px;
 height:43px;
 border-radius:50%;
-background:#278fe1;
-box-shadow:0 3px 9px #278fe155;
+background:#666259;
+box-shadow:0 3px 9px #66625955;
 }
 
 .ytmusic-controls strong em{
@@ -162,7 +162,7 @@ background:#ddd;
 display:block;
 width:57%;
 height:100%;
-background:#278fe1;
+background:#666259;
 }
 
 .ytmusic-time{
