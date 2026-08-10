@@ -193,9 +193,11 @@ display:block!important;
 position:absolute;
 inset:0;
 z-index:2;
+display:block;
 overflow:hidden;
 opacity:1;
 cursor:pointer;
+pointer-events:auto;
 transition:opacity .25s;
 }
 
