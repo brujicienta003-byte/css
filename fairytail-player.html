@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FairyTailRPG Video Generator</title>
+<style>
+:root{--ink:#171717;--muted:#746f6a;--paper:#fff;--line:#ddd9d5;--accent:#706c64;--page:#111218;--panel:#191a22}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif}body{background:var(--page);color:#f7f4ef}.generator{min-height:100vh;padding:36px 20px 60px;background:radial-gradient(circle at 12% 0,#242637 0,transparent 34%),radial-gradient(circle at 100% 100%,#202234 0,transparent 38%),var(--page)}.generator-shell{width:min(1080px,100%);margin:auto}.eyebrow{margin:0 0 10px;color:#aaa4a0;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}.generator h1{margin:0;font-family:Georgia,serif;font-size:clamp(34px,6vw,66px);font-weight:400;letter-spacing:-.04em}.intro{max-width:650px;margin:12px 0 30px;color:#b9b4b0;font-size:14px;line-height:1.7}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:26px;align-items:start}.form-card,.preview-card{border:1px solid #ffffff12;border-radius:18px;background:#191a22dd;box-shadow:0 22px 60px #0005}.form-card{padding:24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{color:#d7d2cc;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.field input{width:100%;height:42px;padding:0 12px;border:1px solid #ffffff19;border-radius:9px;outline:0;background:#101116;color:#fff;font:13px Arial}.field input:focus{border-color:#a29b90;box-shadow:0 0 0 3px #a29b901c}.checkline{display:flex;align-items:center;gap:9px;margin-top:2px;color:#c8c3be;font-size:12px}.checkline input{width:15px;height:15px;accent-color:#8e887e}.actions{display:flex;gap:10px;margin-top:22px}.button{height:42px;padding:0 18px;border:0;border-radius:10px;background:#f4f1ec;color:#171717;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.button.secondary{border:1px solid #ffffff18;background:#24252e;color:#fff}.output{margin-top:22px}.output textarea{width:100%;min-height:112px;padding:14px;border:1px solid #ffffff17;border-radius:10px;resize:vertical;background:#0e0f14;color:#d8d2cb;font:11px/1.55 Consolas,monospace}.status{min-height:18px;margin:8px 0 0;color:#aaa49d;font-size:11px}.preview-card{position:sticky;top:22px;padding:17px}.preview-label{margin:0 0 13px;color:#aaa49d;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.preview-frame{display:block;width:290px;height:430px;margin:auto;border:0;border-radius:8px;background:#fff}.player-page{display:grid;min-height:100vh;place-items:center;background:transparent}.player{width:290px;padding:12px 10px 14px;border-radius:5px;background:var(--paper);box-shadow:0 5px 22px #0002;color:var(--ink);text-align:center}.media{position:relative;width:270px;height:270px;overflow:hidden;background:#0b0b0b}.media-cover{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#111;cursor:pointer}.media-cover img{display:block;width:100%;height:100%;object-fit:cover}.media-cover.gray img{filter:grayscale(1)}.media-cover::after{content:"";position:absolute;top:50%;left:50%;width:0;height:0;margin-left:5px;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:19px solid #fff;transform:translate(-50%,-50%);z-index:2}.media-cover::before{content:"";position:absolute;top:50%;left:50%;width:64px;height:64px;border-radius:50%;background:#000c;box-shadow:0 4px 15px #0004;transform:translate(-50%,-50%);z-index:1}.media iframe{position:absolute;top:50%;left:50%;width:690px;height:388px;border:0;transform:translate(-50%,-50%)}.track-info{padding:9px 0 11px}.track-info b{display:block;font-size:14px;line-height:18px}.track-info span{display:block;margin-top:3px;color:#555;font-size:9px;text-transform:uppercase}.fake-controls{display:flex;align-items:center;justify-content:space-around;padding:0 16px 10px}.fake-controls i{width:22px;color:#222;font-size:13px;font-style:normal;user-select:none}.fake-controls i:first-child,.fake-controls i:last-child{color:#888}.fake-controls strong{display:flex;align-items:center;justify-content:center;gap:4px;width:43px;height:43px;border-radius:50%;background:var(--accent);box-shadow:0 3px 9px #0003}.fake-controls strong em{display:block;width:4px;height:15px;border-radius:2px;background:#fff}.progress{height:3px;margin-bottom:7px;overflow:hidden;border-radius:5px;background:#ddd}.progress span{display:block;width:57%;height:100%;background:var(--accent)}.times{display:flex;justify-content:space-between;color:#333;font:9px monospace}.empty-cover{display:grid;width:100%;height:100%;place-items:center;background:linear-gradient(145deg,#312f32,#151518);color:#aaa;font:11px Arial}@media(max-width:820px){.workspace{grid-template-columns:1fr}.preview-card{position:static}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}@media(max-width:380px){.generator{padding-inline:12px}.form-card{padding:17px}.preview-card{padding:10px}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+(function(){
+const app=document.getElementById('app');
+const qs=new URLSearchParams(location.search);
+const escapeHtml=(value)=>String(value??'').replace(/[&<>'"]/g,(char)=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+const extractVideoId=(value)=>{const raw=String(value||'').trim();if(/^[\w-]{11}$/.test(raw))return raw;try{const url=new URL(raw);if(url.hostname.includes('youtu.be'))return url.pathname.split('/').filter(Boolean)[0]||'';if(url.pathname.includes('/embed/'))return url.pathname.split('/embed/')[1].split('/')[0]||'';if(url.pathname.includes('/shorts/'))return url.pathname.split('/shorts/')[1].split('/')[0]||'';return url.searchParams.get('v')||''}catch{return ''}};
+const cleanColor=(value)=>/^#[0-9a-f]{6}$/i.test(value||'')?value:'#706c64';
+function renderPlayer(){
+const video=extractVideoId(qs.get('video'));
+const cover=qs.get('cover')||'';
+const title=qs.get('title')||'I Got Your Back';
+const artist=qs.get('artist')||'ILLIT';
+const current=qs.get('current')||'02:11';
+const duration=qs.get('duration')||'03:17';
+const gray=qs.get('gray')!=='0';
+const accent=cleanColor(qs.get('accent'));
+document.documentElement.style.setProperty('--accent',accent);
+document.body.className='player-page';
+app.innerHTML='<section class="player" aria-label="Reproductor de '+escapeHtml(title)+'"><div class="media"><button class="media-cover '+(gray?'gray':'')+'" type="button" aria-label="Reproducir video">'+(cover?'<img src="'+escapeHtml(cover)+'" alt="">':'<span class="empty-cover">Sin portada</span>')+'</button></div><div class="track-info"><b>'+escapeHtml(title)+'</b><span>'+escapeHtml(artist)+'</span></div><div class="fake-controls" aria-hidden="true"><i>↝</i><i>◀</i><strong><em></em><em></em></strong><i>▶</i><i>↜</i></div><div class="progress"><span></span></div><div class="times"><span>'+escapeHtml(current)+'</span><span>'+escapeHtml(duration)+'</span></div></section>';
+const media=app.querySelector('.media');
+const button=app.querySelector('.media-cover');
+button.addEventListener('click',()=>{
+if(!video){button.querySelector('.empty-cover').textContent='Falta el ID de YouTube';return}
+const iframe=document.createElement('iframe');
+iframe.src='https://www.youtube.com/embed/'+encodeURIComponent(video)+'?autoplay=1&controls=0&playsinline=1&rel=0&iv_load_policy=3&fs=0';
+iframe.allow='autoplay;encrypted-media;picture-in-picture';
+iframe.allowFullscreen=true;
+iframe.title=title;
+media.replaceChildren(iframe);
+});
+}
+function renderGenerator(){
+document.body.className='generator';
+app.innerHTML='<div class="generator-shell"><p class="eyebrow">FairyTailRPG · herramienta privada</p><h1>Video post generator</h1><p class="intro">Armá una portada musical limpia para tus tablillas. No guarda archivos ni necesita base de datos: cada combinación genera una URL única lista para embeber.</p><div class="workspace"><section class="form-card"><div class="form-grid"><div class="field full"><label for="video">Video de YouTube</label><input id="video" placeholder="URL o ID del video"></div><div class="field full"><label for="cover">Portada custom</label><input id="cover" placeholder="https://..."></div><div class="field"><label for="title">Título</label><input id="title" value="I Got Your Back"></div><div class="field"><label for="artist">Artista</label><input id="artist" value="ILLIT"></div><div class="field"><label for="current">Tiempo izquierdo</label><input id="current" value="02:11"></div><div class="field"><label for="duration">Duración</label><input id="duration" value="03:17"></div><div class="field"><label for="accent">Color de controles</label><input id="accent" type="color" value="#706c64"></div><label class="checkline"><input id="gray" type="checkbox" checked> Convertir portada a escala de grises</label></div><div class="actions"><button class="button" id="generate" type="button">Generar iframe</button><button class="button secondary" id="copy" type="button">Copiar código</button></div><div class="output"><textarea id="code" readonly aria-label="Código iframe generado"></textarea><p class="status" id="status"></p></div></section><aside class="preview-card"><p class="preview-label">Vista previa</p><iframe class="preview-frame" id="preview" title="Vista previa del reproductor"></iframe></aside></div></div>';
+const $=(id)=>document.getElementById(id);
+const fields=['video','cover','title','artist','current','duration','accent','gray'];
+function build(){
+const video=extractVideoId($('video').value);
+const base=new URL('fairytail-player.html',location.href);
+base.searchParams.set('embed','1');
+base.searchParams.set('video',video||$('video').value.trim());
+base.searchParams.set('cover',$('cover').value.trim());
+base.searchParams.set('title',$('title').value.trim());
+base.searchParams.set('artist',$('artist').value.trim());
+base.searchParams.set('current',$('current').value.trim());
+base.searchParams.set('duration',$('duration').value.trim());
+base.searchParams.set('accent',$('accent').value);
+base.searchParams.set('gray',$('gray').checked?'1':'0');
+const src=base.href;
+const code='<iframe src="'+src.replace(/&/g,'&amp;')+'" width="290" height="430" frameborder="0" allow="autoplay;encrypted-media;picture-in-picture" allowfullscreen></iframe>';
+$('code').value=code;
+$('preview').src=src;
+$('status').textContent=video?'Listo para pegar en el foro.':'Pegá un enlace válido de YouTube para completar el reproductor.';
+return code;
+}
+$('generate').addEventListener('click',build);
+$('copy').addEventListener('click',async()=>{const code=build();try{await navigator.clipboard.writeText(code);$('status').textContent='Código copiado.'}catch{$('code').select();document.execCommand('copy');$('status').textContent='Código copiado.'}});
+fields.forEach((id)=>$(id).addEventListener(id==='gray'?'change':'input',build));
+build();
+}
+if(qs.has('embed')||qs.has('video'))renderPlayer();else renderGenerator();
+})();
+</script>
+</body>
+</html>
