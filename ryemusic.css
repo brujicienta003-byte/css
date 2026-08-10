@@ -1,6 +1,6 @@
 .ytmusic-toggle{
 position:relative;
-width:270px;
+width:290px;
 }
 
 .ytmusic-toggle>input{
@@ -40,11 +40,19 @@ transform:scale(1.08);
 background:#55524c;
 }
 
-.ytmusic-toggle>input:not(:checked)~.ytmusic{
+.ytmusic-embed{
+display:block;
+width:290px;
+height:430px;
+border:0;
+overflow:hidden;
+}
+
+.ytmusic-toggle>input:not(:checked)~.ytmusic-embed{
 display:none;
 }
 
-.ytmusic-toggle>input:checked~.ytmusic{
+.ytmusic-toggle>input:checked~.ytmusic-embed{
 display:block;
 }
 
@@ -52,7 +60,7 @@ display:block;
 position:absolute;
 top:18px;
 right:18px;
-z-index:5;
+z-index:10;
 width:24px;
 height:24px;
 margin:0;
