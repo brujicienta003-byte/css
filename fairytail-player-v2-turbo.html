@@ -78,7 +78,7 @@ player=new YT.Player('youtube-player',{
 width:690,
 height:388,
 videoId:video,
-playerVars:{autoplay:1,controls:0,playsinline:1,rel:0,iv_load_policy:3,fs:0},
+playerVars:{autoplay:1,controls:0,playsinline:1,rel:0,iv_load_policy:3,fs:0,origin:location.origin},
 events:{
 onReady:(event)=>{isReady=true;coverButton.classList.remove('loading');coverButton.classList.add('hidden');event.target.playVideo();syncProgress();resolve(event.target)},
 onStateChange:(event)=>{
@@ -115,7 +115,9 @@ const $=(id)=>document.getElementById(id);
 const fields=['video','cover','title','artist','accent','gray'];
 function build(){
 const video=extractVideoId($('video').value);
-const base=new URL('fairytail-player.html',location.href);
+const base=new URL(location.href);
+base.search='';
+base.hash='';
 base.searchParams.set('embed','1');
 base.searchParams.set('video',video||$('video').value.trim());
 base.searchParams.set('cover',$('cover').value.trim());
