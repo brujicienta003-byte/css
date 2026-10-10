@@ -341,3 +341,9 @@ content: "FASHION EDITOR";
 opacity: 0;
 }
 }
+
+.itgirl-outfit-section .bbc_spoiler {
+  background: none;
+  color: unset;
+  border: unset;
+}
