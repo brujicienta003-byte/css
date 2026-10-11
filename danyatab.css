@@ -33,7 +33,7 @@
 .bruma .bruma-footer { position: relative; margin-top: 32px; padding: 24px 30px 0; text-align: center; background: radial-gradient(ellipse 80% 100% at 50% 110%, rgba(103, 134, 148, .18), transparent 80%); } 
 .bruma .bruma-signature { display: block; margin: 0; color: #bbc9cf; font: 9px/1.6 Arial, Helvetica, sans-serif; letter-spacing: 3px; text-transform: uppercase; } 
 .bruma .bruma-footer-slot { display: grid; align-items: end; justify-items: center; min-height: 140px; margin-top: 20px; } 
-.bruma .bruma-footer-png { display: block; width: auto; max-width: 100%; height: auto; max-height: 260px; margin: 0 auto; border: 0; object-fit: contain; filter: drop-shadow(0 0 20px rgba(127, 159, 172, .09)); } 
+.bruma .bruma-footer-png { display: block; width: auto; max-width: 100%; height: auto; max-height: 260px; margin: 0 auto; border: 0; object-fit: contain; filter: drop-shadow(0 0 20px rgba(127, 159, 172, .09)) grayscale(50%) contrast(120%) saturate(90%); } 
 .bruma .bruma-footer-png[src^='URL_'] { display: none; } 
 .bruma .bruma-footer-empty { align-self: center; padding: 17px 32px; border-top: 1px solid rgba(205, 226, 236, .08); border-bottom: 1px solid rgba(205, 226, 236, .08); color: #72858f; font: 9px/1.7 Arial, Helvetica, sans-serif; letter-spacing: 1.4px; } 
 .bruma .bruma-footer-empty span { display: block; margin-top: 4px; font-size: 8px; letter-spacing: 2px; opacity: .75; } 
