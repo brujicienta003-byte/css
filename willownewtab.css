@@ -294,6 +294,9 @@
   list-style: none;
   box-shadow: 0 4px 12px rgba(91, 99, 67, 0.3);
 }
+
+.oerv-footer .bbc_spoiler summary {all:unset;}
+
 .oerv-trigger-btn::-webkit-details-marker { display: none; }
 
 .oerv-trigger-btn:hover {
@@ -380,3 +383,5 @@
 .oerv-footer .bbc_spoiler {
   all: unset !important;
 }
+
+.oerv-footer details[open] > summary::before {all: unset !important;}
