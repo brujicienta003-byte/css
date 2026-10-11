@@ -376,3 +376,7 @@
   .oerv-outfit-box { grid-template-columns: 1fr; text-align: center; }
   .oerv-outfit-info { text-align: center; }
 }
+
+.oerv-footer .bbc_spoiler {
+  all: unset !important;
+}
