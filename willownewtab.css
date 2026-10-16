@@ -386,6 +386,7 @@
 
 .oerv-footer details[open] > summary::before {all: unset !important;}
 
+.oerv-text p {display: block;}
 .oerv-text p::first-letter {
   float: left;
   font-family: 'Cormorant Garamond', serif;
