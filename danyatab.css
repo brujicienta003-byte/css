@@ -73,3 +73,79 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.3rem;
 }
+
+/* Diálogo con traducción */
+.bruma b.bruma-info[data-info]:not([data-info=""]) {
+  position: relative;
+  display: inline;
+  cursor: zoom-in;
+  text-decoration: underline dotted rgba(216, 228, 231, .4);
+  text-underline-offset: 4px;
+}
+
+/* Indicador de información */
+.bruma b.bruma-info[data-info]:not([data-info=""])::before {
+  content: "ⓘ\00a0";
+  display: inline;
+  color: var(--br-accent, #d8e4e7);
+  font: 400 .75em/1 Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+}
+
+/* Traducción flotante: no ocupa espacio en el párrafo */
+.bruma b.bruma-info[data-info]:not([data-info=""])::after {
+  content: attr(data-info);
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(340px, calc(100vw - 80px));
+  padding: 11px 14px;
+  border: 1px solid rgba(216, 228, 231, .23);
+  border-radius: 8px;
+  background: #10191e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  color: #e2ebee;
+  font: 400 12px/1.65 Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+  text-indent: 0;
+  letter-spacing: normal;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity .15s ease, transform .15s ease,
+              visibility .15s ease;
+}
+
+/* Mostrar al pasar el mouse o enfocar */
+.bruma b.bruma-info:hover,
+.bruma b.bruma-info:focus {
+  z-index: 100;
+}
+
+.bruma b.bruma-info[data-info]:not([data-info=""]):hover::after,
+.bruma b.bruma-info[data-info]:not([data-info=""]):focus::after {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.bruma b.bruma-info:focus-visible {
+  outline: 1px dotted var(--br-accent, #d8e4e7);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bruma b.bruma-info::after {
+    transition: none;
+  }
+}
