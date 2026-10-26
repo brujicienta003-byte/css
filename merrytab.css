@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* Todo queda limitado a .rr-gryffindor para no alterar el skin del foro. */
+.rr-gryffindor {
+  --gr-rojo: #8d2435;
+  --gr-rojo-oscuro: #591725;
+  --gr-dorado: #d9b568;
+  --gr-tinta: #392c2d;
+  --gr-suave: #756562;
+  --gr-papel: #fffcf6;
+  --gr-linea: #eaded1;
+  --gr-sans: 'DM Sans', Arial, sans-serif;
+  --gr-titulo: 'Bricolage Grotesque', Arial, sans-serif;
+  --gr-serif: 'Lora', Georgia, serif;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 860px;
+  min-width: 0;
+  margin: 26px auto;
+  padding: 25px;
+  overflow: visible;
+  border: 1px solid #e8dbca;
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse at 100% 4%, #ecd6c28a 0, transparent 36%),
+    radial-gradient(ellipse at 0 72%, #e8c4c24a 0, transparent 35%),
+    #f6efe5;
+  box-shadow: 0 18px 50px #3d172b0a;
+  color: var(--gr-tinta);
+  font: 400 14px/1.5 var(--gr-sans);
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.rr-gryffindor *, .rr-gryffindor *::before, .rr-gryffindor *::after { box-sizing: border-box; }
+.rr-gryffindor h2, .rr-gryffindor h3, .rr-gryffindor p, .rr-gryffindor blockquote { margin: 0; padding: 0; border: 0; background: none; }
+.rr-gryffindor .grf-top { display: flex; align-items: center; justify-content: space-between; gap: 18px; position: relative; z-index: 4; }
+.rr-gryffindor .grf-brand { display: flex; align-items: center; gap: 10px; }
+.rr-gryffindor .grf-crest { display: grid; place-items: center; flex: 0 0 33px; width: 33px; height: 39px; padding-bottom: 4px; clip-path: polygon(0 0,100% 0,100% 65%,85% 84%,50% 100%,15% 84%,0 65%); border-radius: 5px 5px 0 0; color: #f1d89c; background: var(--gr-rojo); font: 600 24px/1 var(--gr-serif); }
+.rr-gryffindor .grf-brand-name { display: block; color: var(--gr-rojo-oscuro); font: 800 15px/1.1 var(--gr-titulo); letter-spacing: .02em; }
+.rr-gryffindor .grf-brand-sub { display: block; margin-top: 4px; color: var(--gr-suave); font: 600 8px/1.4 var(--gr-sans); letter-spacing: .19em; text-transform: uppercase; }
+.rr-gryffindor .grf-motto { display: flex; align-items: center; gap: 11px; color: var(--gr-rojo); font: 500 11px/1.4 var(--gr-sans); }
+.rr-gryffindor .grf-motto::before { content: ''; width: 22px; height: 1px; background: #b38b48; }
+.rr-gryffindor .grf-hero { position: relative; min-height: 284px; margin-top: 62px; }
+.rr-gryffindor .grf-hero-bg { position: absolute; inset: 0; overflow: hidden; border-radius: 25px; background: linear-gradient(116deg,#a73747 0%,#892136 53%,#5b1b2b 100%); }
+.rr-gryffindor .grf-hero-bg::before { content: ''; position: absolute; width: 450px; height: 390px; left: -135px; bottom: -297px; border-radius: 50%; background: #c7686666; transform: rotate(-19deg); }
+.rr-gryffindor .grf-hero-bg::after { content: ''; position: absolute; inset: 0; opacity: .55; background-image: radial-gradient(circle at 28px 30px,#f5d492 1px,transparent 1.6px),radial-gradient(circle at 60px 42px,#ffffff8c .8px,transparent 1.5px); background-size: 106px 91px,157px 133px; }
+.rr-gryffindor .grf-orbit { position: absolute; right: 30px; top: 22px; display: grid; place-items: center; width: 233px; height: 233px; border: 1px solid #ebc78540; border-radius: 50%; color: #edc78324; font: 500 175px/1 var(--gr-serif); }
+.rr-gryffindor .grf-orbit::before { content: ''; position: absolute; inset: 13px; border: 1px solid #ebc78526; border-radius: 50%; }
+.rr-gryffindor .grf-hero-copy { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; width: 57%; min-height: 284px; padding: 30px 0 27px 34px; }
+.rr-gryffindor .grf-eyebrow { display: flex; align-items: center; gap: 8px; color: #f0d39a; font: 600 9px/1.5 var(--gr-sans); letter-spacing: .2em; text-transform: uppercase; }
+.rr-gryffindor .grf-eyebrow::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #f0d39a; }
+.rr-gryffindor .grf-name { margin-top: 17px; color: #fff5e5; font: 700 49px/1.02 var(--gr-titulo); letter-spacing: -.045em; overflow-wrap: anywhere; }
+.rr-gryffindor .grf-name span { display: block; color: #f0ce86; }
+.rr-gryffindor .grf-tagline { max-width: 240px; margin-top: 15px; color: #ffe9dc; font: 400 12px/1.65 var(--gr-sans); }
+.rr-gryffindor .grf-bars { display: flex; gap: 10px; margin-top: 21px; }
+.rr-gryffindor .grf-bars i { width: 35px; height: 3px; border-radius: 3px; background: #f6e4d74a; }
+.rr-gryffindor .grf-bars i:first-child { background: #f3d18b; }
+/* El PNG ocupa la derecha y sobresale por arriba. No se estira ni se recorta. */
+.rr-gryffindor .grf-character { position: absolute; z-index: 3; right: 0; bottom: 0; width: 45%; height: calc(100% + 58px); border-radius: 0 0 25px 0; background-image: var(--gr-personaje,none); background-repeat: no-repeat; background-position: var(--gr-png-x,50%) var(--gr-png-y,100%); background-size: var(--gr-png-tamano,contain); filter: drop-shadow(-7px 4px 8px #32111b30); pointer-events: none; }
+/* El marcador se oculta solo al cambiar none por url('...'). */
+.rr-gryffindor .grf-placeholder { display: none; }
+.rr-gryffindor[style*="--gr-personaje: none"] .grf-placeholder { position: absolute; inset: 7px 25px 23px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px; border: 1px dashed #d9b568a6; border-radius: 150px 150px 15px 15px; background: linear-gradient(180deg,#d4b37224,#9c3a4326 35%,#642032aa); color: #f5dfb7; text-align: center; }
+.rr-gryffindor .grf-placeholder-symbol { color: #f0cf92; font: 400 33px/1 var(--gr-serif); }
+.rr-gryffindor .grf-placeholder-label { margin-top: 4px; font: 600 9px/1.5 var(--gr-sans); letter-spacing: .19em; text-transform: uppercase; }
+.rr-gryffindor .grf-placeholder-note { color: #f0d4c2; font: 400 10px/1.5 var(--gr-sans); }
+.rr-gryffindor .grf-spark { position: absolute; z-index: 4; top: -20px; right: 35%; color: #c99a47; font: 400 36px/1 Georgia,serif; transform: rotate(-10deg); pointer-events: none; }
+.rr-gryffindor .grf-spark::after { content: '✦'; position: absolute; top: 31px; left: -15px; color: #c99a47; font-size: 16px; }
+.rr-gryffindor .grf-layout { display: grid; grid-template-columns: minmax(0,1fr) 192px; align-items: start; gap: 18px; margin-top: 24px; }
+.rr-gryffindor .grf-story { min-width: 0; overflow: hidden; border: 1px solid #fff9; border-radius: 24px; background: var(--gr-papel); box-shadow: 0 5px 11px #533b2e08; }
+.rr-gryffindor .grf-story-head { padding: 28px 30px 21px; }
+.rr-gryffindor .grf-chapter { display: flex; align-items: center; gap: 9px; color: var(--gr-rojo); font: 700 9px/1.5 var(--gr-sans); letter-spacing: .18em; text-transform: uppercase; }
+.rr-gryffindor .grf-chapter::before { content: ''; width: 20px; height: 2px; background: #c4a161; }
+.rr-gryffindor .grf-title { margin-top: 11px; color: var(--gr-rojo-oscuro); font: 700 25px/1.15 var(--gr-titulo); letter-spacing: -.025em; overflow-wrap: anywhere; }
+.rr-gryffindor .grf-story-rule { display: flex; align-items: center; gap: 13px; margin-top: 21px; color: #b28d48; font: 400 13px/1 Georgia,serif; }
+.rr-gryffindor .grf-story-rule::before, .rr-gryffindor .grf-story-rule::after { content: ''; height: 1px; flex: 1; background: var(--gr-linea); }
+.rr-gryffindor .grf-prose { padding: 0 30px 29px; color: var(--gr-tinta); font: 400 14px/1.95 var(--gr-serif); text-align: left; overflow-wrap: anywhere; }
+.rr-gryffindor .grf-prose p { margin: 0 0 17px; color: inherit; font: inherit; }
+.rr-gryffindor .grf-prose p:last-child { margin-bottom: 0; }
+.rr-gryffindor .grf-prose > p:first-child::first-letter { float: left; margin: 6px 7px 0 0; color: var(--gr-rojo); font: 500 48px/.84 var(--gr-serif); }
+.rr-gryffindor .grf-prose strong, .rr-gryffindor .grf-prose b { color: var(--gr-rojo); font-weight: 600; }
+.rr-gryffindor .grf-prose em, .rr-gryffindor .grf-prose i { color: #846127; font-style: italic; }
+.rr-gryffindor .grf-prose a { color: var(--gr-rojo); text-decoration: underline; text-underline-offset: 3px; }
+.rr-gryffindor .grf-prose blockquote { margin: 19px 0; padding: 12px 15px; border-left: 2px solid #c4a161; background: #f3ebdd; color: #624b3e; font: italic 400 14px/1.8 var(--gr-serif); }
+.rr-gryffindor .grf-aside { display: grid; gap: 13px; min-width: 0; }
+.rr-gryffindor .grf-meta { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 87px; padding: 17px 14px; border: 1px solid #fff9; border-radius: 20px; background: var(--gr-papel); box-shadow: 0 5px 11px #533b2e08; }
+.rr-gryffindor .grf-meta-num { flex: 0 0 32px; color: var(--gr-rojo); font: 800 29px/1 var(--gr-titulo); letter-spacing: -.06em; text-shadow: 2px 2px 0 #d9b5688c; }
+.rr-gryffindor .grf-meta-body { min-width: 0; }
+.rr-gryffindor .grf-meta-label { display: block; margin-bottom: 5px; color: var(--gr-rojo); font: 700 8px/1.3 var(--gr-sans); letter-spacing: .15em; text-transform: uppercase; }
+.rr-gryffindor .grf-meta-value { display: block; color: var(--gr-tinta); font: 500 11px/1.5 var(--gr-sans); overflow-wrap: anywhere; }
+.rr-gryffindor .grf-note { position: relative; overflow: hidden; padding: 26px 19px 23px; border-radius: 20px; background: #ead8b3; color: #624a29; }
+.rr-gryffindor .grf-note::before { content: ''; position: absolute; width: 150px; height: 150px; top: -93px; right: -68px; border: 1px solid #ac884c66; border-radius: 50%; }
+.rr-gryffindor .grf-note-mark { display: block; margin-bottom: 17px; color: #87652a; font: 400 24px/1 Georgia,serif; }
+.rr-gryffindor .grf-note-text { position: relative; font: italic 500 15px/1.65 var(--gr-serif); }
+.rr-gryffindor .grf-note-sub { display: block; margin-top: 17px; color: #755a33; font: 600 8px/1.5 var(--gr-sans); letter-spacing: .15em; text-transform: uppercase; }
+.rr-gryffindor .grf-foot { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 21px; padding: 0 4px; color: #806f64; font: 500 8px/1.5 var(--gr-sans); letter-spacing: .16em; text-transform: uppercase; }
+.rr-gryffindor .grf-foot span:last-child { color: var(--gr-rojo); }
+/* Responde al ancho del mensaje, aunque el foro tenga una columna estrecha. */
+@container (max-width: 650px) {
+  .rr-gryffindor .grf-layout { grid-template-columns: minmax(0,1fr); }
+  .rr-gryffindor .grf-aside { grid-row: 1; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+  .rr-gryffindor .grf-meta { align-items: flex-start; gap: 9px; padding: 15px 12px; }
+  .rr-gryffindor .grf-meta-num { flex-basis: 24px; font-size: 24px; }
+  .rr-gryffindor .grf-note { display: none; }
+  .rr-gryffindor .grf-name { font-size: 44px; }
+  .rr-gryffindor .grf-hero-copy { padding-left: 27px; }
+  .rr-gryffindor .grf-orbit { right: 10px; width: 210px; height: 210px; top: 38px; }
+}
+@container (max-width: 460px) {
+  .rr-gryffindor .grf-motto { display: none; }
+  .rr-gryffindor .grf-hero { min-height: 260px; margin-top: 48px; }
+  .rr-gryffindor .grf-hero-copy { width: 59%; min-height: 260px; padding: 24px 0 24px 21px; }
+  .rr-gryffindor .grf-name { margin-top: 14px; font-size: 34px; }
+  .rr-gryffindor .grf-eyebrow { font-size: 8px; letter-spacing: .13em; }
+  .rr-gryffindor .grf-tagline { max-width: 160px; padding-right: 10px; font-size: 11px; }
+  .rr-gryffindor .grf-character { width: 40%; height: calc(100% + 40px); }
+  .rr-gryffindor[style*="--gr-personaje: none"] .grf-placeholder { inset: 4px 9px 15px 0; }
+  .rr-gryffindor .grf-placeholder-label { font-size: 8px; letter-spacing: .08em; }
+  .rr-gryffindor .grf-placeholder-note { max-width: 75px; font-size: 9px; }
+  .rr-gryffindor .grf-orbit { right: -45px; }
+  .rr-gryffindor .grf-spark { right: 32%; top: -17px; font-size: 28px; }
+  .rr-gryffindor .grf-aside { gap: 7px; }
+  .rr-gryffindor .grf-meta { display: block; min-height: 104px; padding: 13px 10px; border-radius: 15px; }
+  .rr-gryffindor .grf-meta-num { display: block; margin-bottom: 9px; font-size: 23px; }
+  .rr-gryffindor .grf-meta-label { font-size: 7px; letter-spacing: .08em; }
+  .rr-gryffindor .grf-meta-value { font-size: 10px; }
+  .rr-gryffindor .grf-story-head { padding: 24px 21px 20px; }
+  .rr-gryffindor .grf-title { font-size: 24px; }
+  .rr-gryffindor .grf-prose { padding: 0 21px 25px; }
+  .rr-gryffindor .grf-foot { font-size: 7px; letter-spacing: .09em; }
+}
+/* Fallback por viewport para skins viejos sin container queries. */
+@media (max-width: 650px) {
+  .rr-gryffindor { padding: 16px; border-radius: 25px; }
+  .rr-gryffindor .grf-layout { grid-template-columns: minmax(0,1fr); }
+  .rr-gryffindor .grf-aside { grid-row: 1; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .rr-gryffindor .grf-note { display: none; }
+}
+@media (max-width: 440px) {
+  .rr-gryffindor { padding: 12px; border-radius: 23px; }
+  .rr-gryffindor .grf-motto { display: none; }
+}
