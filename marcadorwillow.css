@@ -1,163 +1,66 @@
-/* Marcador de duelos · estilo Nimbus / Willow
-   Archivo externo: enlazar una sola vez en el foro.
-   Todos los selectores usan el prefijo .nimbus-duel para no alterar la tablilla. */
-
-.nimbus-duel {
-  --nd-olive: #5b6343;
-  --nd-olive-dark: #485239;
-  --nd-sand: #b5a18b;
-  --nd-ink: #34372d;
-  --nd-muted: #908a7b;
-  --nd-edge: #e7e0d4;
-  --nd-split: 50%;
-
-  box-sizing: border-box;
-  isolation: isolate;
-  width: 100%;
-  max-width: 650px;
-  margin: 22px auto;
-  padding: 23px 25px 25px;
-  border: 1px solid var(--nd-edge);
-  border-radius: 15px;
-  background: linear-gradient(160deg, #fffefa 0%, #fbfaf5 100%);
-  box-shadow: 0 6px 19px rgb(47 48 33 / 5%);
-  color: var(--nd-ink);
-  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  text-align: center;
+/* Club de Duelos — skin Nimbus para la estructura ORIGINAL .rduel.
+   Todos los selectores aislados para no modificar la tablilla de Willow. */
+.rduel {
+  --a:#596245;
+  --b:#b8a189;
+  max-width:650px;
+  width:100%;
+  box-sizing:border-box;
+  margin:22px auto;
+  padding:21px 24px 23px;
+  color:#34392f;
+  background:linear-gradient(150deg,#fffefa,#faf9f4);
+  border:1px solid #e4ded2;
+  border-radius:15px;
+  box-shadow:0 7px 20px rgb(37 43 30 / 5%);
+  font-family:'Cormorant Garamond',Georgia,serif;
 }
-
-.nimbus-duel *,
-.nimbus-duel *::before,
-.nimbus-duel *::after { box-sizing: border-box; }
-
-.nimbus-duel .nd-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 13px;
-  margin-bottom: 20px;
-  color: var(--nd-olive);
-  font: 600 10px/1.4 Arial, Helvetica, sans-serif;
-  letter-spacing: .29em;
-  text-transform: uppercase;
+.rduel *, .rduel *::before, .rduel *::after {box-sizing:border-box;}
+.rduel-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding-bottom:13px;
+  margin-bottom:20px;
+  border-bottom:1px solid #e7e1d5;
+  color:#7f826f;
+  font:600 10px/1.4 Arial,Helvetica,sans-serif;
+  letter-spacing:.19em;
+  text-transform:uppercase;
 }
-
-.nimbus-duel .nd-title::before,
-.nimbus-duel .nd-title::after {
-  content: '';
-  width: 38px;
-  max-width: 10%;
-  height: 1px;
-  background: #d9d3c3;
+.rduel-title {color:#596245;letter-spacing:.32em;}
+.rduel-players {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;}
+.rduel-player {min-width:0;display:flex;align-items:center;gap:12px;}
+.rduel-player:last-child {flex-direction:row-reverse;text-align:right;}
+.rduel-portrait {
+  position:relative;flex:0 0 76px;width:76px;height:76px;
+  display:grid;place-items:center;overflow:hidden;
+  border:1px solid #d7d2c2;
+  outline:3px solid #f2efe5;
+  border-radius:50%;
+  background:#eeece3;color:#677052;
+  font:500 37px/1 'Cormorant Garamond',Georgia,serif;
 }
-
-.nimbus-duel .nd-fighters {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
-  align-items: start;
-  gap: 9px;
+.rduel-player:last-child .rduel-portrait {color:#9b8068;}
+.rduel-portrait img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.rduel-portrait img[src=""] {display:none;}
+.rduel-info {min-width:0;flex:1;}
+.rduel-kicker {display:block;color:#989083;font:600 9px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.17em;text-transform:uppercase;}
+.rduel-name {display:block;color:#34392f;font:500 23px/1.04 'Cormorant Garamond',Georgia,serif;overflow-wrap:anywhere;}
+.rduel-points {margin-top:6px;color:var(--side);font:500 36px/1.1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;}
+.rduel-points small {font:600 9px Arial,Helvetica,sans-serif;letter-spacing:.11em;color:#9b9589;text-transform:uppercase;}
+.rduel-arena {position:relative;display:flex;overflow:hidden;height:16px;margin:23px 0 11px;background:var(--b);border-radius:99px;box-shadow:inset 0 1px 2px #262a1b26;}
+.rduel-arena-a {position:relative;flex:0 0 50%;background:linear-gradient(90deg,#78815c,var(--a));transition:flex-basis .85s cubic-bezier(.16,1,.3,1);}
+.rduel-arena-a::after {content:"";position:absolute;right:-1px;top:0;height:100%;width:3px;background:#fffdf5;box-shadow:0 0 7px 2px #fffdf58c;z-index:1;}
+.rduel-arena-b {flex:1;min-width:0;background:linear-gradient(90deg,var(--b),#ccb9a3);}
+.rduel-scale {display:flex;justify-content:space-between;gap:12px;color:#908a7b;font:italic 14px/1.1 'Cormorant Garamond',Georgia,serif;}
+@media(max-width:540px) {
+ .rduel {padding:18px 14px;}
+ .rduel-players {gap:12px;}
+ .rduel-player,.rduel-player:last-child {flex-direction:column;text-align:center;}
+ .rduel-portrait {width:70px;height:70px;flex-basis:70px;}
+ .rduel-name {font-size:21px;}
+ .rduel-head {font-size:9px;}
 }
-
-.nimbus-duel .nd-fighter { min-width: 0; }
-
-.nimbus-duel .nd-portrait {
-  display: block;
-  width: 81px;
-  height: 81px;
-  margin: 0 auto 10px;
-  padding: 3px;
-  border: 1px solid #d5d3c5;
-  border-radius: 50%;
-  background: #f2f0e8;
-  box-shadow: 0 0 0 4px rgb(222 218 200 / 20%);
-  object-fit: cover;
-}
-
-.nimbus-duel .nd-name {
-  display: block;
-  margin: 0;
-  color: var(--nd-ink);
-  font: 500 22px/1.03 'Cormorant Garamond', Georgia, serif;
-  overflow-wrap: anywhere;
-}
-
-.nimbus-duel .nd-house {
-  display: block;
-  margin-top: 7px;
-  color: var(--nd-muted);
-  font: 600 9px/1.3 Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .16em;
-}
-
-.nimbus-duel .nd-score {
-  display: block;
-  margin-top: 9px;
-  font: 500 39px/1 'Cormorant Garamond', Georgia, serif;
-  font-variant-numeric: lining-nums tabular-nums;
-  color: var(--nd-olive-dark);
-}
-
-.nimbus-duel .nd-fighter:last-child .nd-score { color: #9c866d; }
-
-.nimbus-duel .nd-vs {
-  display: block;
-  margin-top: 30px;
-  color: #9c978a;
-  font: italic 18px/1 'Cormorant Garamond', Georgia, serif;
-}
-
-.nimbus-duel .nd-caption {
-  display: block;
-  margin: 19px 0 10px;
-  color: var(--nd-muted);
-  font: italic 16px/1.1 'Cormorant Garamond', Georgia, serif;
-}
-
-.nimbus-duel .nd-track {
-  position: relative;
-  display: block;
-  height: 12px;
-  overflow: visible;
-  border-radius: 999px;
-  background: var(--nd-sand);
-  box-shadow: inset 0 1px 2px rgb(30 35 22 / 12%);
-}
-
-.nimbus-duel .nd-fill {
-  display: block;
-  width: var(--nd-split);
-  height: 100%;
-  border-radius: 999px 0 0 999px;
-  background: var(--nd-olive);
-  transition: width 850ms cubic-bezier(.16, 1, .3, 1);
-}
-
-.nimbus-duel .nd-track::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: var(--nd-split);
-  width: 19px;
-  height: 19px;
-  transform: translate(-50%, -50%);
-  border: 4px solid #faf8ef;
-  border-radius: 50%;
-  background: #ded8c5;
-  box-shadow: 0 0 0 1px #b5ac92, 0 2px 7px rgb(45 45 31 / 13%);
-  transition: left 850ms cubic-bezier(.16, 1, .3, 1);
-}
-
-@media (max-width: 460px) {
-  .nimbus-duel { padding: 20px 14px 22px; }
-  .nimbus-duel .nd-fighters { grid-template-columns: minmax(0,1fr) 25px minmax(0,1fr); gap: 4px; }
-  .nimbus-duel .nd-portrait { width: 66px; height: 66px; }
-  .nimbus-duel .nd-name { font-size: 19px; }
-  .nimbus-duel .nd-vs { margin-top: 25px; font-size: 15px; }
-  .nimbus-duel .nd-score { font-size: 34px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nimbus-duel .nd-fill,
-  .nimbus-duel .nd-track::after { transition: none; }
-}
+@media(prefers-reduced-motion:reduce) {.rduel-arena-a {transition:none;}}
