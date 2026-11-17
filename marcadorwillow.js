@@ -1,47 +1,22 @@
-/* Marcador Nimbus: solo lectura. Modificá data-left y data-right en el post. */
-(() => {
-  'use strict';
-
-  function points(value) {
-    const number = Number(value);
-    return Number.isFinite(number) ? Math.max(0, Math.floor(number)) : 0;
-  }
-
-  function initDuel(duel) {
-    if (duel.dataset.ndReady === 'yes') return;
-    duel.dataset.ndReady = 'yes';
-
-    const left = points(duel.dataset.left);
-    const right = points(duel.dataset.right);
-    const leftLabel = duel.querySelector('.nd-score-left');
-    const rightLabel = duel.querySelector('.nd-score-right');
-    const track = duel.querySelector('.nd-track');
-
-    if (leftLabel) leftLabel.textContent = String(left);
-    if (rightLabel) rightLabel.textContent = String(right);
-
-    const share = left + right === 0 ? 50 : (left / (left + right)) * 100;
-    if (track) {
-      track.setAttribute('role', 'img');
-      track.setAttribute('aria-label',
-        `Dominio del duelo: izquierda ${share.toFixed(1)}%, derecha ${(100 - share).toFixed(1)}%`);
-    }
-
-    // Arranca en 50/50 y se desliza hasta la proporción de puntos publicada.
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        duel.style.setProperty('--nd-split', `${share}%`);
-      });
-    });
-  }
-
-  function initAll() {
-    document.querySelectorAll('.nimbus-duel').forEach(initDuel);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAll, { once: true });
-  } else {
-    initAll();
-  }
+/* Mismo sistema de inicializacion del primer marcador .rduel.
+   Sin controles; puntajes definidos desde los atributos data. */
+(function () {
+  document.querySelectorAll('.rduel:not([data-ready])').forEach(function (el) {
+    el.dataset.ready = '1';
+    var a = Math.max(0, Number(el.dataset.aPoints) || 0);
+    var b = Math.max(0, Number(el.dataset.bPoints) || 0);
+    var scoreA = el.querySelector('[data-score="a"]');
+    var scoreB = el.querySelector('[data-score="b"]');
+    var barA = el.querySelector('[data-terrain="a"]');
+    var shareA = el.querySelector('[data-share="a"]');
+    var shareB = el.querySelector('[data-share="b"]');
+    var progress = el.querySelector('.rduel-arena');
+    var territoryA = a + b ? (a / (a + b)) * 100 : 50;
+    if (scoreA) scoreA.textContent = a;
+    if (scoreB) scoreB.textContent = b;
+    if (shareA) shareA.textContent = territoryA.toFixed(1) + '% del terreno';
+    if (shareB) shareB.textContent = (100 - territoryA).toFixed(1) + '% del terreno';
+    if (progress) progress.setAttribute('aria-valuenow', String(territoryA));
+    if (barA) setTimeout(function () { barA.style.flexBasis = territoryA + '%'; }, 60);
+  });
 })();
