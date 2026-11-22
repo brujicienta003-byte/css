@@ -1,0 +1,218 @@
+/* CARTA OFICIAL — DANYA DERVISHI */
+.dd-carta {
+--dd-ink: #302f2c;
+--dd-muted: #777067;
+--dd-gold: #9f8050;
+--dd-paper: #f2eee4;
+--dd-wine: #563b3d;
+max-width: 700px;
+margin: 35px auto;
+padding: 13px;
+background: #292c2d;
+box-sizing: border-box;
+box-shadow: 0 18px 55px rgba(0,0,0,.3);
+font-family: Georgia, "Times New Roman", serif;
+color: var(--dd-ink);
+}
+
+.dd-carta, .dd-carta * {
+box-sizing: border-box;
+}
+
+.dd-carta .dd-hoja {
+position: relative;
+padding: 55px 60px 47px;
+background:
+radial-gradient(ellipse at 15% 5%, rgba(174,147,99,.12), transparent 55%),
+radial-gradient(ellipse at 90% 95%, rgba(120,96,66,.09), transparent 60%),
+var(--dd-paper);
+border: 1px solid #c7bda9;
+outline: 1px solid rgba(159,128,80,.35);
+outline-offset: -9px;
+}
+
+.dd-carta .dd-encabezado {
+text-align: center;
+}
+
+.dd-carta .dd-emblema {
+width: 69px;
+height: 77px;
+margin: 0 auto 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+color: var(--dd-gold);
+font-size: 37px;
+font-weight: normal;
+border: 1px solid var(--dd-gold);
+border-radius: 8px 8px 32px 32px;
+}
+
+.dd-carta .dd-emblema:before {
+content: "";
+position: absolute;
+inset: 5px;
+border: 1px solid rgba(159,128,80,.45);
+border-radius: 5px 5px 26px 26px;
+}
+
+.dd-carta .dd-institucion {
+font-size: 12px;
+letter-spacing: 3px;
+line-height: 1.9;
+text-transform: uppercase;
+font-weight: bold;
+color: #383633;
+}
+
+.dd-carta .dd-departamento {
+margin-top: 8px;
+color: var(--dd-muted);
+font: 10px/1.6 Arial, sans-serif;
+letter-spacing: 2.5px;
+text-transform: uppercase;
+}
+
+.dd-carta .dd-divisor {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 28px 0 32px;
+color: var(--dd-gold);
+}
+
+.dd-carta .dd-divisor:before,
+.dd-carta .dd-divisor:after {
+content: "";
+flex: 1;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(--dd-gold));
+}
+
+.dd-carta .dd-divisor:after {
+transform: rotate(180deg);
+}
+
+.dd-carta .dd-referencia {
+padding: 12px 0 15px;
+border-bottom: 1px solid #c9bfaf;
+margin-bottom: 32px;
+font: 11px/1.9 Arial, sans-serif;
+color: var(--dd-muted);
+}
+
+.dd-carta .dd-referencia b {
+color: var(--dd-ink);
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 600;
+}
+
+.dd-carta .dd-asunto {
+display: block;
+margin-top: 9px;
+color: var(--dd-wine);
+font-weight: bold;
+letter-spacing: .4px;
+}
+
+.dd-carta .dd-texto {
+font-size: 14px;
+line-height: 2;
+text-align: justify;
+}
+
+.dd-carta .dd-texto p {
+margin: 0 0 20px;
+padding: 0;
+color: var(--dd-ink);
+font: inherit;
+}
+
+.dd-carta .dd-texto p:first-child {
+margin-bottom: 25px;
+}
+
+.dd-carta .dd-firma {
+margin-top: 40px;
+padding-top: 20px;
+border-top: 1px solid #c9bfaf;
+position: relative;
+min-height: 105px;
+}
+
+.dd-carta .dd-firma-nombre {
+display: block;
+color: var(--dd-wine);
+font-size: 19px;
+font-style: italic;
+margin-bottom: 7px;
+}
+
+.dd-carta .dd-firma-cargo {
+display: block;
+font: 10px/1.8 Arial, sans-serif;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(--dd-muted);
+}
+
+.dd-carta .dd-sello {
+position: absolute;
+right: 5px;
+top: 14px;
+width: 98px;
+height: 98px;
+border: 2px double rgba(86,59,61,.45);
+border-radius: 50%;
+transform: rotate(-14deg);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: rgba(86,59,61,.7);
+text-align: center;
+font-family: Georgia, serif;
+}
+
+.dd-carta .dd-sello:before {
+content: "";
+position: absolute;
+inset: 5px;
+border: 1px solid rgba(86,59,61,.4);
+border-radius: 50%;
+}
+
+.dd-carta .dd-sello strong {
+font-size: 28px;
+font-weight: normal;
+line-height: 1.1;
+}
+
+.dd-carta .dd-sello span {
+font: 8px/1.6 Arial, sans-serif;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+}
+
+.dd-carta .dd-pie {
+margin-top: 22px;
+text-align: center;
+color: var(--dd-gold);
+font: 9px/1.5 Arial, sans-serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+@media(max-width:600px) {
+.dd-carta { margin: 15px auto; padding: 7px; }
+.dd-carta .dd-hoja { padding: 38px 25px 30px; }
+.dd-carta .dd-institucion { font-size: 10px; letter-spacing: 2px; }
+.dd-carta .dd-texto { font-size: 13px; line-height: 1.85; }
+.dd-carta .dd-sello { width: 75px; height: 75px; right: 0; }
+.dd-carta .dd-sello strong { font-size: 22px; }
+.dd-carta .dd-sello span { font-size: 6px; }
+.dd-carta .dd-firma-nombre { font-size: 16px; }
+}
